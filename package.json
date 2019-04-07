@@ -12,11 +12,13 @@
     "nodemon": "^1.18.10",
     "pino": "^5.12.0",
     "pino-pretty": "^2.5.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "request": "^2.88.0"
   },
   "scripts": {
-    "start": "NODE_ENV=dev nodemon node server/app.js",
-    "format": "prettier es5 --single-quote --write '{client,server}/**/*.js'"
+    "start": "NODE_ENV=dev nodemon node server/start.js",
+    "format": "prettier es5 --single-quote --write '{server,client}/**/*.{tsx,js}'",
+    "test": "ava --verbose"
   },
   "nodemonConfig": {
     "ignore": [
@@ -24,5 +26,9 @@
       "dist/*",
       "cypress/*"
     ]
+  },
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "supertest": "^4.0.2"
   }
 }

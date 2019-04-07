@@ -2,22 +2,21 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
 class App extends Component {
   componentDidMount() {
-    fetch("/api")
+    fetch('/api')
       .then(res => res.json())
       .then(
-        (result) => {
+        result => {
           console.log(result);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
-        (error) => {
+        error => {
           console.log('error', error);
         }
-      )
+      );
   }
 
   render() {

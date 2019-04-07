@@ -4,6 +4,8 @@ const expressStatusMonitor = require('express-status-monitor');
 const CONST = require('./constants');
 const homeController = require('./controllers/home');
 const apiController = require('./controllers/api');
+const categoriesController = require('./controllers/api/categories');
+const productsController = require('./controllers/api/products');
 const { logger } = require('./utils/logger');
 const utils = require('./utils');
 
@@ -36,7 +38,7 @@ app.use(
 app.use(express.static(process.env.BUILD_DIR));
 app.get('/', homeController.index);
 app.get('/api', apiController.index);
-
-app.listen(port, () => logger.info(`Server listening on port ${port}!`));
+app.get('/api/products', productsController.index);
+app.get('/api/categories', categoriesController.index);
 
 module.exports = app;
