@@ -1,0 +1,7 @@
+{
+  "Test.Text1": "Some Test Text",
+  "Test.Text.With.Param": "Some text with {param} parameter",
+  "Follow.Button.Text": "Follow",
+  "No.Data": "Sorry, no more suggestions for today",
+  "Change.Language": "Sprache ändern/Change Language"
+}

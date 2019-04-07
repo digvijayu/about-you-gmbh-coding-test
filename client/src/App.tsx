@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
+import { AppState } from './store';
+import { SystemState } from './store/system/types';
+import { updateSession } from './store/system/actions';
+import { ChatState } from './store/grid/types';
+import { sendMessage } from './store/grid/actions';
 
-class App extends Component {
-  componentDidMount() {
-    fetch('/api')
-      .then(res => res.json())
-      .then(
-        result => {
-          console.log(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        error => {
-          console.log('error', error);
-        }
-      );
-  }
+interface AppProps {
+  sendMessage: typeof sendMessage;
+  updateSession: typeof updateSession;
+  chat: ChatState;
+  system: SystemState;
+  thunkSendMessage: any;
+}
+
+class App extends Component<AppProps> {
+  state = {
+    message: ''
+  };
 
   render() {
     return (
@@ -41,4 +43,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state: AppState) => ({
+  system: state.system,
+  chat: state.chat
+});
+
+export default connect(
+  mapStateToProps,
+  { sendMessage, updateSession }
+)(App);
