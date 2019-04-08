@@ -1,28 +1,51 @@
-export interface Attributes {
-  new: Boolean;
-  premium: Boolean;
-  quantityPerPack: Number;
-  bigSize: Boolean;
-  isSoldOut: Boolean;
-  color: String;
-}
-
-export interface Brand {
-  id: Number;
-  name: String;
-}
-
 export interface Product {
-  id: Number;
-  name: String;
-  slug: String;
-  parentId: Number;
-  path: String;
-  childrenIds: Number[];
-  rootlineIds: Number[];
-  parentIds: Number[];
-  isHidden: Boolean;
-  hasRedirectPath: Boolean;
-  attributes: Attributes | null;
-  brand: Brand;
+  attributes: {
+    new: Boolean;
+    premium: Boolean;
+    quantityPerPack: number;
+    bigSize: Boolean;
+    isSoldOut: Boolean;
+    color: string;
+  } | null;
+  brand: {
+    id: number;
+    name: string;
+  };
+  categories: ProductCategory[];
+  containingCategoryIds: number[];
+  id: number;
+  images: {
+    imageBustFirst: ProductImage;
+    imageModelFirst: ProductImage;
+    imagesBustFirst: ProductImage[];
+    imagesModelFirst: ProductImage[];
+  };
+  isSoldOut: Boolean;
+  name: string;
+  priceSummary: {
+    isFromPrice: Boolean;
+    withTax: number;
+    referencePrice: {
+      size: number;
+      unit: string;
+      withTax: number;
+    };
+    withoutTax: number;
+  };
+}
+
+export interface ProductImage {
+  brightness: number;
+  focus: string;
+  hash: string;
+  priority: number;
+  trim: Boolean;
+  type: string;
+  view: string;
+}
+
+export interface ProductCategory {
+  id: number;
+  name: string;
+  url: string;
 }
