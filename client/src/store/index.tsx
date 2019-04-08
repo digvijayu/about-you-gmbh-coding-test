@@ -3,11 +3,11 @@ import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { systemReducer } from './system/reducers';
-import { chatReducer } from './grid/reducers';
+import { gridReducer } from './grid/reducers';
 
 const rootReducer = combineReducers({
   system: systemReducer,
-  chat: chatReducer
+  grid: gridReducer
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

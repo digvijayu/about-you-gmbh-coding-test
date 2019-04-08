@@ -1,28 +1,42 @@
 import {
-  ChatState,
-  ChatActionTypes,
-  SEND_MESSAGE,
-  DELETE_MESSAGE
+  GridState,
+  GridActionTypes,
+  REQUEST_PRODUCTS,
+  PRODUCTS_RECEIVED,
+  PRODUCTS_REQUEST_FAILED
 } from './types';
 
-const initialState: ChatState = {
-  messages: []
+const initialState: GridState = {
+  products: [],
+  error: null,
+  isLoading: true
 };
 
-export function chatReducer(
+export function gridReducer(
   state = initialState,
-  action: ChatActionTypes
-): ChatState {
+  action: GridActionTypes
+): GridState {
   switch (action.type) {
-    case SEND_MESSAGE:
+    case REQUEST_PRODUCTS:
       return {
-        messages: [...state.messages, action.payload]
+        ...state,
+        products: [],
+        error: null,
+        isLoading: true
       };
-    case DELETE_MESSAGE:
+    case PRODUCTS_RECEIVED:
       return {
-        messages: state.messages.filter(
-          message => message.timestamp !== action.meta.timestamp
-        )
+        ...state,
+        products: action.products,
+        error: null,
+        isLoading: false
+      };
+    case PRODUCTS_REQUEST_FAILED:
+      return {
+        ...state,
+        products: [],
+        error: action.error,
+        isLoading: false
       };
     default:
       return state;

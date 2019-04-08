@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from './logo.svg';
 import './App.css';
 import { AppState } from './store';
 import { SystemState } from './store/system/types';
 import { updateSession } from './store/system/actions';
-import { ChatState } from './store/grid/types';
-import { sendMessage } from './store/grid/actions';
+import { GridState } from './store/grid/types';
+import Grid from './pages/Grid';
 
 interface AppProps {
-  sendMessage: typeof sendMessage;
   updateSession: typeof updateSession;
-  chat: ChatState;
+  grid: GridState;
   system: SystemState;
   thunkSendMessage: any;
 }
@@ -24,20 +22,7 @@ class App extends Component<AppProps> {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Grid />
       </div>
     );
   }
@@ -45,10 +30,10 @@ class App extends Component<AppProps> {
 
 const mapStateToProps = (state: AppState) => ({
   system: state.system,
-  chat: state.chat
+  grid: state.grid
 });
 
 export default connect(
   mapStateToProps,
-  { sendMessage, updateSession }
+  {}
 )(App);

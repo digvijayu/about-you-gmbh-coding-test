@@ -1,24 +1,27 @@
+import { Product } from './../../types';
 import {
-  Message,
-  SEND_MESSAGE,
-  DELETE_MESSAGE,
-  ChatActionTypes
+  REQUEST_PRODUCTS,
+  PRODUCTS_RECEIVED,
+  PRODUCTS_REQUEST_FAILED,
+  GridActionTypes
 } from './types';
 
-// TypeScript infers that this function is returning SendMessageAction
-export function sendMessage(newMessage: Message): ChatActionTypes {
+export function requestProducts(): GridActionTypes {
   return {
-    type: SEND_MESSAGE,
-    payload: newMessage
+    type: REQUEST_PRODUCTS
   };
 }
 
-// TypeScript infers that this function is returning DeleteMessageAction
-export function deleteMessage(timestamp: number): ChatActionTypes {
+export function productsReceived(products: Product[]): GridActionTypes {
   return {
-    type: DELETE_MESSAGE,
-    meta: {
-      timestamp
-    }
+    type: PRODUCTS_RECEIVED,
+    products
+  };
+}
+
+export function productsRequestFailed(error: Error): GridActionTypes {
+  return {
+    type: PRODUCTS_REQUEST_FAILED,
+    error
   };
 }

@@ -1,26 +1,30 @@
-export const SEND_MESSAGE = 'SEND_MESSAGE';
-export const DELETE_MESSAGE = 'DELETE_MESSAGE';
+import { Product } from './../../types';
 
-export interface Message {
-  user: string;
-  message: string;
-  timestamp: number;
+export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS';
+export const PRODUCTS_RECEIVED = 'PRODUCTS_RECEIVED';
+export const PRODUCTS_REQUEST_FAILED = 'PRODUCTS_REQUEST_FAILED';
+
+export interface GridState {
+  products: Product[];
+  error: Error | null;
+  isLoading: Boolean;
 }
 
-export interface ChatState {
-  messages: Message[];
+interface RequestProductsAction {
+  type: typeof REQUEST_PRODUCTS;
 }
 
-interface SendMessageAction {
-  type: typeof SEND_MESSAGE;
-  payload: Message;
+interface ProductsReceivedAction {
+  type: typeof PRODUCTS_RECEIVED;
+  products: Product[];
 }
 
-interface DeleteMessageAction {
-  type: typeof DELETE_MESSAGE;
-  meta: {
-    timestamp: number;
-  };
+interface ProductsRequestFailedAction {
+  type: typeof PRODUCTS_REQUEST_FAILED;
+  error: Error;
 }
 
-export type ChatActionTypes = SendMessageAction | DeleteMessageAction;
+export type GridActionTypes =
+  | RequestProductsAction
+  | ProductsReceivedAction
+  | ProductsRequestFailedAction;

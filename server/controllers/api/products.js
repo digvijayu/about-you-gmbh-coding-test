@@ -1,8 +1,8 @@
 const { logger } = require('./../../utils/logger');
 
 exports.index = (req, res) => {
-  res.send({
-    '245646': {
+  res.send([
+    {
       id: 245646,
       name: 'Feinripp-Spaghettitops',
       isSoldOut: false,
@@ -104,7 +104,7 @@ exports.index = (req, res) => {
         227524
       ]
     },
-    '453752': {
+    {
       id: 453752,
       name: "Leggings 'New'",
       isSoldOut: false,
@@ -254,7 +254,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101214, 227522, 227535]
     },
-    '2148312': {
+    {
       id: 2148312,
       name: "Body-Bluse 'Lady'",
       isSoldOut: false,
@@ -422,7 +422,7 @@ exports.index = (req, res) => {
         227530
       ]
     },
-    '2194800': {
+    {
       id: 2194800,
       name: 'Skinnyjeans Highwaist',
       isSoldOut: false,
@@ -599,7 +599,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '2198942': {
+    {
       id: 2198942,
       name: "Stoffhose 'ONLPoptrash'",
       isSoldOut: false,
@@ -767,7 +767,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 69628]
     },
-    '2217018': {
+    {
       id: 2217018,
       name: "Skinny Jeans 'ONLKendell'",
       isSoldOut: false,
@@ -944,7 +944,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '2269333': {
+    {
       id: 2269333,
       name: "Skinnyjeans 'ONLRoyal High Skinny'",
       isSoldOut: false,
@@ -1103,7 +1103,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '3383096': {
+    {
       id: 3383096,
       name: "Shirt 'The Perfect Tee Large Batwing'",
       isSoldOut: false,
@@ -1242,7 +1242,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20250, 20530, 130279, 235919]
     },
-    '3397376': {
+    {
       id: 3397376,
       name: "Superstretchige Denim 'Royal'",
       isSoldOut: false,
@@ -1401,7 +1401,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '3420622': {
+    {
       id: 3420622,
       name: 'Leggings',
       isSoldOut: false,
@@ -1551,7 +1551,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101214]
     },
-    '3557629': {
+    {
       id: 3557629,
       name: "Jeans 'Onlcoral'",
       isSoldOut: false,
@@ -1744,7 +1744,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '3557858': {
+    {
       id: 3557858,
       name: "T-Shirt 'Vmlua'",
       isSoldOut: false,
@@ -1894,7 +1894,7 @@ exports.index = (req, res) => {
         227525
       ]
     },
-    '3567549': {
+    {
       id: 3567549,
       name: 'T-Shirt',
       isSoldOut: false,
@@ -2067,7 +2067,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20250, 20530, 140094]
     },
-    '3600150': {
+    {
       id: 3600150,
       name: "'Lonia' Super Skinny Mid Rise Jeans",
       isSoldOut: false,
@@ -2235,7 +2235,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '3628182': {
+    {
       id: 3628182,
       name: "'Sunny' Jeansrock",
       isSoldOut: false,
@@ -2423,7 +2423,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20259, 20668, 101232]
     },
-    '3632330': {
+    {
       id: 3632330,
       name: "Jogginghose 'Vintage Pants'",
       isSoldOut: false,
@@ -2578,7 +2578,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101213, 235587, 101215]
     },
-    '3653078': {
+    {
       id: 3653078,
       name: "Shirt 'onlVIC'",
       isSoldOut: false,
@@ -2748,7 +2748,7 @@ exports.index = (req, res) => {
         235806
       ]
     },
-    '3664757': {
+    {
       id: 3664757,
       name: "Jeans 'RAIN CRY6060'",
       isSoldOut: false,
@@ -2907,7 +2907,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '3738240': {
+    {
       id: 3738240,
       name: "Skinny Fit Jeans 'Sophia'",
       isSoldOut: false,
@@ -3057,7 +3057,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '3749225': {
+    {
       id: 3749225,
       name: 'Jumpsuit',
       isSoldOut: false,
@@ -3158,7 +3158,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20238, 232038, 325619]
     },
-    '3786395': {
+    {
       id: 3786395,
       name: "Jeans 'JULITA X'",
       isSoldOut: false,
@@ -3308,7 +3308,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 101144]
     },
-    '3808532': {
+    {
       id: 3808532,
       name: "High-waist-Jeans 'SOPHIA'",
       isSoldOut: false,
@@ -3476,7 +3476,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '3850322': {
+    {
       id: 3850322,
       name: 'Jeans',
       isSoldOut: false,
@@ -3626,7 +3626,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '3857337': {
+    {
       id: 3857337,
       name: 'Lockere Hose',
       isSoldOut: false,
@@ -3781,7 +3781,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101213, 235587]
     },
-    '3861556': {
+    {
       id: 3861556,
       name: "Top 'APPA'",
       isSoldOut: false,
@@ -3931,7 +3931,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20255, 20586, 100192]
     },
-    '3892208': {
+    {
       id: 3892208,
       name: "Shirts 'PCILU BODYSTOCKING NOOS'",
       isSoldOut: false,
@@ -4076,7 +4076,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20250]
     },
-    '3897534': {
+    {
       id: 3897534,
       name: 'Hose',
       isSoldOut: false,
@@ -4226,7 +4226,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 69628]
     },
-    '3919375': {
+    {
       id: 3919375,
       name: "Hose 'POPTRASH'",
       isSoldOut: false,
@@ -4381,7 +4381,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101213, 235587, 69628]
     },
-    '3938480': {
+    {
       id: 3938480,
       name: "Jeans 'onlANNE K'",
       isSoldOut: false,
@@ -4531,7 +4531,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '3953961': {
+    {
       id: 3953961,
       name: "Jeans 'Lucia'",
       isSoldOut: false,
@@ -4713,7 +4713,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 140105, 324578, 324589]
     },
-    '3960084': {
+    {
       id: 3960084,
       name: 'Push Up Jeans',
       isSoldOut: false,
@@ -4872,7 +4872,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '4022478': {
+    {
       id: 4022478,
       name: "Jeans 'PAOLA'",
       isSoldOut: false,
@@ -5022,7 +5022,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '4036654': {
+    {
       id: 4036654,
       name: "Body 'Miriam'",
       isSoldOut: false,
@@ -5180,7 +5180,7 @@ exports.index = (req, res) => {
         324583
       ]
     },
-    '4072105': {
+    {
       id: 4072105,
       name: 'Jeans',
       isSoldOut: false,
@@ -5330,7 +5330,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '4087965': {
+    {
       id: 4087965,
       name: 'Dirndl',
       isSoldOut: false,
@@ -5489,7 +5489,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 77925, 140120]
     },
-    '4105898': {
+    {
       id: 4105898,
       name: "Rock  'Sky'",
       isSoldOut: false,
@@ -5639,7 +5639,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20259, 20668, 101232]
     },
-    '4107900': {
+    {
       id: 4107900,
       name: 'Hose',
       isSoldOut: false,
@@ -5812,7 +5812,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101213, 235587, 69628]
     },
-    '4115482': {
+    {
       id: 4115482,
       name: 'Hose',
       isSoldOut: false,
@@ -5967,7 +5967,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20257, 101213, 235587]
     },
-    '4140286': {
+    {
       id: 4140286,
       name: "Sweatshirt 'Frank'",
       isSoldOut: false,
@@ -6133,7 +6133,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 100212, 100214]
     },
-    '4141695': {
+    {
       id: 4141695,
       name: "Jeans 'Sayana'",
       isSoldOut: false,
@@ -6299,7 +6299,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 22821]
     },
-    '4158050': {
+    {
       id: 4158050,
       name: "Sweatshirt 'Cupa'",
       isSoldOut: false,
@@ -6449,7 +6449,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 100212, 100214]
     },
-    '4159564': {
+    {
       id: 4159564,
       name: "Shirt 'Annelie'",
       isSoldOut: false,
@@ -6612,7 +6612,7 @@ exports.index = (req, res) => {
         324583
       ]
     },
-    '4160647': {
+    {
       id: 4160647,
       name: 'Badeanzug lea',
       isSoldOut: false,
@@ -6783,7 +6783,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20284, 20802, 220494]
     },
-    '4164742': {
+    {
       id: 4164742,
       name: "Sweatshirt 'Cherell'",
       isSoldOut: false,
@@ -6933,7 +6933,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 100212, 100215, 324578, 324590]
     },
-    '4168377': {
+    {
       id: 4168377,
       name: 'Shirt',
       isSoldOut: false,
@@ -7088,7 +7088,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20250, 20530, 140095]
     },
-    '4171359': {
+    {
       id: 4171359,
       name: "Jeans 'PAOLA'",
       isSoldOut: false,
@@ -7238,7 +7238,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20258, 324614, 101144]
     },
-    '4184754': {
+    {
       id: 4184754,
       name: "Kleid 'Ten'",
       isSoldOut: false,
@@ -7404,7 +7404,7 @@ exports.index = (req, res) => {
       ],
       containingCategoryIds: [20201, 20204, 20236, 20443]
     },
-    '4197193': {
+    {
       id: 4197193,
       name: "Jeans 'Onlcoral'",
       isSoldOut: false,
@@ -7565,7 +7565,7 @@ exports.index = (req, res) => {
         227539
       ]
     },
-    '4226465': {
+    {
       id: 4226465,
       name: 'Kleid',
       isSoldOut: false,
@@ -7735,7 +7735,7 @@ exports.index = (req, res) => {
         235778
       ]
     },
-    '4227362': {
+    {
       id: 4227362,
       name: "Rock 'AVA SKIRT'",
       isSoldOut: false,
@@ -7896,5 +7896,5 @@ exports.index = (req, res) => {
         227533
       ]
     }
-  });
+  ]);
 };
