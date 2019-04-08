@@ -5,6 +5,8 @@ import { SystemState } from './../../store/system/types';
 import { updateSession } from './../../store/system/actions';
 import { GridState } from './../../store/grid/types';
 import { loadProductsThunk } from './../../store/grid/thunks';
+import GridProduct from './../../components/GridProduct';
+import './style.css';
 
 interface GridProps {
   updateSession: typeof updateSession;
@@ -19,7 +21,16 @@ class Grid extends Component<GridProps> {
   }
 
   render() {
-    return <div>Grid</div>;
+    const { isLoading, error, products } = this.props.grid;
+    return (
+      <div className="Ay-Grid">
+        {isLoading && <div>loading...</div>}
+        {!isLoading &&
+          products.map((product, index) => (
+            <GridProduct product={product} key={index} />
+          ))}
+      </div>
+    );
   }
 }
 

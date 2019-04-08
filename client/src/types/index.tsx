@@ -7,6 +7,11 @@ export interface Attributes {
   color: String;
 }
 
+export interface Brand {
+  id: Number;
+  name: String;
+}
+
 export interface Product {
   id: Number;
   name: String;
@@ -19,4 +24,5 @@ export interface Product {
   isHidden: Boolean;
   hasRedirectPath: Boolean;
   attributes: Attributes | null;
+  brand: Brand;
 }
