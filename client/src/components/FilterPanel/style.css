@@ -1,0 +1,18 @@
+.Ay-FilterPanel{
+  padding: 2rem 0;
+}
+
+.Ay-FilterPanel__active-view-div {}
+
+.Ay-FilterPanel__active-view-option {
+  cursor: pointer;
+}
+
+.Ay-FilterPanel__active-view-option--active {
+  font-weight: bold;
+  cursor: auto
+}
+
+.Ay-FilterPanel__active-view-seperator {
+  margin: 0 1rem;
+}

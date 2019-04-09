@@ -3,16 +3,18 @@ import {
   GridActionTypes,
   REQUEST_PRODUCTS,
   PRODUCTS_RECEIVED,
-  PRODUCTS_REQUEST_FAILED
+  PRODUCTS_REQUEST_FAILED,
+  CHANGE_VIEW
 } from './types';
 
-import { GridViewType } from './../../types';
+import { GridViewType, GridSortType } from './../../types';
 
 const initialState: GridState = {
   products: [],
   error: null,
   isLoading: true,
-  activeView: GridViewType.PRODUCT_VIEW
+  activeView: GridViewType.PRODUCT_VIEW,
+  selectedSortBy: GridSortType.HIGHEST_REDUCTION
 };
 
 export function gridReducer(
@@ -40,6 +42,11 @@ export function gridReducer(
         products: [],
         error: action.error,
         isLoading: false
+      };
+    case CHANGE_VIEW:
+      return {
+        ...state,
+        activeView: action.view
       };
     default:
       return state;

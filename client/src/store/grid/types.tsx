@@ -1,14 +1,16 @@
-import { Product, GridViewType } from './../../types';
+import { Product, GridViewType, GridSortType } from './../../types';
 
 export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS';
 export const PRODUCTS_RECEIVED = 'PRODUCTS_RECEIVED';
 export const PRODUCTS_REQUEST_FAILED = 'PRODUCTS_REQUEST_FAILED';
+export const CHANGE_VIEW = 'CHANGE_VIEW';
 
 export interface GridState {
   products: Product[];
   error: Error | null;
   isLoading: Boolean;
   activeView: GridViewType;
+  selectedSortBy: GridSortType;
 }
 
 interface RequestProductsAction {
@@ -25,7 +27,13 @@ interface ProductsRequestFailedAction {
   error: Error;
 }
 
+interface ChangeViewAction {
+  type: typeof CHANGE_VIEW;
+  view: GridViewType;
+}
+
 export type GridActionTypes =
   | RequestProductsAction
   | ProductsReceivedAction
-  | ProductsRequestFailedAction;
+  | ProductsRequestFailedAction
+  | ChangeViewAction;

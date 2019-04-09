@@ -6,6 +6,7 @@ import { updateSession } from './../../store/system/actions';
 import { GridState } from './../../store/grid/types';
 import { loadProductsThunk } from './../../store/grid/thunks';
 import GridProduct from './../../components/GridProduct';
+import FilterPanel from './../../components/FilterPanel';
 import './style.css';
 
 interface GridProps {
@@ -21,14 +22,21 @@ class Grid extends Component<GridProps> {
   }
 
   render() {
-    const { isLoading, error, products } = this.props.grid;
+    const { isLoading, products, activeView } = this.props.grid;
     return (
       <div className="Ay-Grid">
-        {isLoading && <div>loading...</div>}
-        {!isLoading &&
-          products.map((product, index) => (
-            <GridProduct product={product} key={index} />
-          ))}
+        <FilterPanel />
+        <div className="Ay-Grid__grid-products-div">
+          {isLoading && <div>loading...</div>}
+          {!isLoading &&
+            products.map((product, index) => (
+              <GridProduct
+                product={product}
+                key={index}
+                viewType={activeView}
+              />
+            ))}
+        </div>
       </div>
     );
   }

@@ -1,5 +1,8 @@
 .Ay-Grid {
   padding: 0 1.5rem;
+}
+
+.Ay-Grid__grid-products-div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* see notes below */
   grid-gap: 1em;
