@@ -115,7 +115,7 @@ describe('should test component, GridProduct', () => {
       'Feinripp-Spaghettitops'
     );
     expect(gridProduct.find('.Ay-GridProduct__brand').text()).toBe('H.I.S');
-    expect(gridProduct.find('.Ay-GridProduct__price').text()).toBe('€ 24.99');
+    expect(gridProduct.find('.Ay-GridProduct__price').text()).toBe('24.99 €');
     console.log(
       gridProduct.find('.Ay-GridProduct__image-div').get(0).props.style
     );

@@ -1,5 +1,5 @@
 export const formattedCost = (cost: number, currency: string = '€'): string => {
-  return currency + ' ' + (cost / 100).toString();
+  return (cost / 100).toString() + ' ' + currency;
 };
 
 export const getImageUrl = (hash: string): string => {

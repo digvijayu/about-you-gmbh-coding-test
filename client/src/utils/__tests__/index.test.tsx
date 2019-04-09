@@ -2,9 +2,9 @@ import { formattedCost, getImageUrl } from './../index';
 
 describe('should test utility functions', () => {
   it('should test function, formattedCost', () => {
-    expect(formattedCost(2000)).toBe('€ 20');
-    expect(formattedCost(2000, '£')).toBe('£ 20');
-    expect(formattedCost(2099)).toBe('€ 20.99');
+    expect(formattedCost(2000)).toBe('20 €');
+    expect(formattedCost(2000, '£')).toBe('20 £');
+    expect(formattedCost(2099)).toBe('20.99 €');
   });
 
   it('should test function, getImageUrl', () => {

@@ -1,12 +1,19 @@
-.Ay-GridProduct {}
+.Ay-GridProduct {
+  width: 200px;
+}
 
 .Ay-GridProduct__image-div {
   height: 20rem;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+  background-size: auto 80%;
+  background-position: center;
 }
 
 .Ay-GridProduct__name--div {
   display: flex;
   flex-layout: column;
+  padding: 0.625rem;
 }
 
 .Ay-GridProduct__name--col-left {
@@ -16,12 +23,14 @@
 .Ay-GridProduct__name--col-right {}
 
 .Ay-GridProduct__title {
-  font-size: 0.875rem
+  font-size: 0.875rem;
+  line-height: 1.2rem;
 }
 
 .Ay-GridProduct__brand {
   font-size: 0.6875rem;
   color: #acacad;
+  line-height: 1.2rem;
 }
 
 .Ay-GridProduct__price {

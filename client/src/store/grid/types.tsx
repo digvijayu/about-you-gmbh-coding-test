@@ -1,4 +1,4 @@
-import { Product } from './../../types';
+import { Product, GridViewType } from './../../types';
 
 export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS';
 export const PRODUCTS_RECEIVED = 'PRODUCTS_RECEIVED';
@@ -8,6 +8,7 @@ export interface GridState {
   products: Product[];
   error: Error | null;
   isLoading: Boolean;
+  activeView: GridViewType;
 }
 
 interface RequestProductsAction {

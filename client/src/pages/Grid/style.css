@@ -1,3 +1,6 @@
 .Ay-Grid {
   padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* see notes below */
+  grid-gap: 1em;
 }

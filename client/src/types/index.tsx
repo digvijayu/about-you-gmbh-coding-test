@@ -49,3 +49,16 @@ export interface ProductCategory {
   name: string;
   url: string;
 }
+
+export enum GridViewType {
+  MODEL_VIEW,
+  PRODUCT_VIEW
+}
+
+export enum GridSortType {
+  YOUR_STYLE,
+  HIGHEST_PRICE,
+  LOWEST_PRICE,
+  NEW_ADDED,
+  HIGHEST_REDUCTION
+}

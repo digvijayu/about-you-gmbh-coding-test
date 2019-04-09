@@ -6,10 +6,13 @@ import {
   PRODUCTS_REQUEST_FAILED
 } from './types';
 
+import { GridViewType } from './../../types';
+
 const initialState: GridState = {
   products: [],
   error: null,
-  isLoading: true
+  isLoading: true,
+  activeView: GridViewType.PRODUCT_VIEW
 };
 
 export function gridReducer(
