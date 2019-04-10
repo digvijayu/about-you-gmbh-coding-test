@@ -5,9 +5,7 @@ import ProductViewer from './../index';
 
 describe('should test component ProductViewer', () => {
   it('should render the component', () => {
-    const { jsx } = testBed(
-          <ProductViewer/>
-    );
+    const { jsx } = testBed(<ProductViewer />);
     const productViewer = mount(jsx);
 
     expect(

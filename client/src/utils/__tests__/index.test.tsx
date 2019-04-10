@@ -1,4 +1,9 @@
-import { formattedCost, getImageUrl, isSupportedLanguage, getMessagesForLang } from './../index';
+import {
+  formattedCost,
+  getImageUrl,
+  isSupportedLanguage,
+  getMessagesForLang
+} from './../index';
 import messages_de from './../../translations/de.json';
 import messages_en from './../../translations/en.json';
 
@@ -19,26 +24,14 @@ describe('should test utility functions', () => {
   });
 
   it('should test function, isSupportedLanguage', () => {
-    expect(isSupportedLanguage('en')).toBe(
-      true
-    );
-    expect(isSupportedLanguage('de')).toBe(
-      true
-    );
-    expect(isSupportedLanguage('us')).toBe(
-      false
-    );
+    expect(isSupportedLanguage('en')).toBe(true);
+    expect(isSupportedLanguage('de')).toBe(true);
+    expect(isSupportedLanguage('us')).toBe(false);
   });
 
   it('should test function, getMessagesForLang', () => {
-    expect(getMessagesForLang('en')).toBe(
-      messages_en
-    );
-    expect(getMessagesForLang('de')).toBe(
-      messages_de
-    );
-    expect(getMessagesForLang('us')).toBe(
-      messages_en
-    );
+    expect(getMessagesForLang('en')).toBe(messages_en);
+    expect(getMessagesForLang('de')).toBe(messages_de);
+    expect(getMessagesForLang('us')).toBe(messages_en);
   });
 });
