@@ -19,7 +19,10 @@
   "scripts": {
     "start": "NODE_ENV=dev nodemon node server/start.js",
     "format": "prettier es5 --single-quote --write '{server,client}/**/*.{tsx,js}'",
-    "test": "ava --verbose"
+    "test": "ava --verbose",
+    "dev": "concurrently 'npm start' 'cd client npm start'",
+    "cypress-open": "cypress open",
+    "cypress": "cypress run"
   },
   "nodemonConfig": {
     "ignore": [
@@ -30,6 +33,7 @@
   },
   "devDependencies": {
     "ava": "^1.4.1",
+    "concurrently": "^4.1.0",
     "supertest": "^4.0.2"
   }
 }
