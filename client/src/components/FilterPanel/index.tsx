@@ -32,7 +32,6 @@ class FilterPanel extends Component<FilterPanelProps & InjectedIntlProps> {
 
   render() {
     const { activeView, selectedSortBy, intl } = this.props;
-    console.log('selectedSortBy', selectedSortBy);
     return (
       <div className="Ay-FilterPanel">
         <div className="Ay-FilterPanel__active-view-div">

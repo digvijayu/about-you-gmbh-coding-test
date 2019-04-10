@@ -1,0 +1,36 @@
+.Ay-ProductViewer {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+
+.Ay-ProductViewer__image-div {
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30rem;
+  background-size: contain;
+}
+
+.Ay-ProductViewer__no-product-found{}
+
+.Ay-ProductViewer__details-div {
+  flex: 1;
+}
+
+.Ay-ProductViewer__details-div__title {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.Ay-ProductViewer__details-div__brand {
+  font-size: 1rem;
+  padding: 1rem;
+  color: #acacad;
+}
+
+.Ay-ProductViewer__details-div__cost {
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+}

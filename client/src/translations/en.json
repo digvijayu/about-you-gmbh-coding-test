@@ -5,8 +5,6 @@
   "Filter.Model.View.Text": "Model View",
   "Filter.Product.View.Text": "Product View",
 
-  "Sort.Option.Highest.Price": "Highest Price",
-  "Sort.Option.Lowest.Price": "Lowest Price",
-  "Sort.Option.New.Added": "New added",
-  "Sort.Option.Highest.Reduction": "Highest Reduction"
+  "Sort.Option.Highest.Price": "Sort By: Highest Price",
+  "Sort.Option.Lowest.Price": "Sort By: Lowest Price"
 }

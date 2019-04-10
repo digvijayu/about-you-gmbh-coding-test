@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Product, GridViewType } from './../../types';
 import { formattedCost, getImageUrl } from './../../utils';
 import './style.css';
@@ -16,7 +17,7 @@ class GridProduct extends Component<GridProductProps> {
         ? product.images.imageBustFirst
         : product.images.imageModelFirst;
     return (
-      <div className="Ay-GridProduct">
+      <Link to={`/product/${product.id}`} className="Ay-GridProduct">
         <div
           className="Ay-GridProduct__image-div"
           style={{
@@ -34,7 +35,7 @@ class GridProduct extends Component<GridProductProps> {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }

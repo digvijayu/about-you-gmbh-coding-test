@@ -1,5 +1,11 @@
 .Ay-GridProduct {
   width: 200px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Ay-GridProduct:hover {
+  opacity: 0.9;
 }
 
 .Ay-GridProduct__image-div {

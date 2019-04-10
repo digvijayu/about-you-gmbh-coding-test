@@ -4,6 +4,7 @@ import { configure } from 'enzyme';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import locale_en from 'react-intl/locale-data/en';
 import locale_de from 'react-intl/locale-data/de';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Adapter from 'enzyme-adapter-react-16';
 import configureStore from './../store';
@@ -24,7 +25,7 @@ function testBed(component: any, config: { lang: string } = { lang: lang }) {
   const jsx = (
     <Provider store={store}>
       <IntlProvider locale={lang} messages={getMessagesForLang(language)}>
-        {React.cloneElement(component)}
+        <Router>{React.cloneElement(component)}</Router>
       </IntlProvider>
     </Provider>
   );

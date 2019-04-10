@@ -3,6 +3,7 @@ import messages_de from './../translations/de.json';
 import messages_en from './../translations/en.json';
 
 export const formattedCost = (cost: number, currency: string = '€'): string => {
+  // Todo: write proper logic to covert number to currency
   return (cost / 100).toString() + ' ' + currency;
 };
 

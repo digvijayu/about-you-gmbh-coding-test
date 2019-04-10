@@ -4,7 +4,6 @@ import { AppState } from './../../store';
 import { SystemState } from './../../store/system/types';
 import { updateSession } from './../../store/system/actions';
 import { GridState } from './../../store/grid/types';
-import { loadProductsThunk } from './../../store/grid/thunks';
 import GridProduct from './../../components/GridProduct';
 import FilterPanel from './../../components/FilterPanel';
 import './style.css';
@@ -17,17 +16,15 @@ interface GridProps {
 }
 
 class Grid extends Component<GridProps> {
-  componentDidMount() {
-    this.props.loadProductsThunk();
-  }
-
   render() {
     const { isLoading, products, activeView } = this.props.grid;
     return (
       <div className="Ay-Grid">
         <FilterPanel />
         <div className="Ay-Grid__grid-products-div">
-          {isLoading && <div>loading...</div>}
+          {isLoading && (
+            <div className="Ay-Grid__grid-products__loading">loading...</div>
+          )}
           {!isLoading &&
             products.map((product, index) => (
               <GridProduct
@@ -48,5 +45,5 @@ const mapStateToProps = (state: AppState) => ({
 
 export default connect(
   mapStateToProps,
-  { loadProductsThunk }
+  {}
 )(Grid);
