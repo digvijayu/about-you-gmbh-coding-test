@@ -1,7 +1,12 @@
 {
   "Test.Text1": "Some Test Text",
   "Test.Text.With.Param": "Some text with {param} parameter",
-  "Follow.Button.Text": "Follow",
-  "No.Data": "Sorry, no more suggestions for today",
-  "Change.Language": "Sprache ändern/Change Language"
+
+  "Filter.Model.View.Text": "Model View",
+  "Filter.Product.View.Text": "Product View",
+
+  "Sort.Option.Highest.Price": "Highest Price",
+  "Sort.Option.Lowest.Price": "Lowest Price",
+  "Sort.Option.New.Added": "New added",
+  "Sort.Option.Highest.Reduction": "Highest Reduction"
 }

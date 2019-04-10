@@ -15,7 +15,6 @@ export const loadProductsThunk = (): ThunkAction<
   null,
   Action<string>
 > => async dispatch => {
-  console.log('here');
   dispatch(requestProducts());
   apiRequest()
     .then(res => dispatch(productsReceived(res)))

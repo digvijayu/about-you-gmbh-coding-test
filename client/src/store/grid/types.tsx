@@ -4,6 +4,7 @@ export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS';
 export const PRODUCTS_RECEIVED = 'PRODUCTS_RECEIVED';
 export const PRODUCTS_REQUEST_FAILED = 'PRODUCTS_REQUEST_FAILED';
 export const CHANGE_VIEW = 'CHANGE_VIEW';
+export const CHANGE_SORT_BY = 'CHANGE_SORT_BY';
 
 export interface GridState {
   products: Product[];
@@ -32,8 +33,14 @@ interface ChangeViewAction {
   view: GridViewType;
 }
 
+interface ChangeSortByAction {
+  type: typeof CHANGE_SORT_BY;
+  sortBy: GridSortType;
+}
+
 export type GridActionTypes =
   | RequestProductsAction
   | ProductsReceivedAction
   | ProductsRequestFailedAction
-  | ChangeViewAction;
+  | ChangeViewAction
+  | ChangeSortByAction;

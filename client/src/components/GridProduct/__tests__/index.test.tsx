@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 
 import GridProduct from './../index';
 import testBed from './../../../helpers/TestBed';
+import { GridViewType } from './../../../types';
 
 const product = {
   id: 245646,
@@ -24,7 +25,7 @@ const product = {
   },
   images: {
     imageModelFirst: {
-      hash: '858231adcc5b6a09b57b37d863592851',
+      hash: 'model-image-hash',
       type: 'bust',
       trim: true,
       brightness: 0.96,
@@ -33,7 +34,7 @@ const product = {
       priority: 502
     },
     imageBustFirst: {
-      hash: '858231adcc5b6a09b57b37d863592851',
+      hash: 'product-image-hash',
       type: 'bust',
       trim: true,
       brightness: 0.96,
@@ -109,21 +110,46 @@ const product = {
 
 describe('should test component, GridProduct', () => {
   it('should render the product details', () => {
-    const { jsx } = testBed(<GridProduct product={product} />);
+    const { jsx } = testBed(
+      <GridProduct product={product} viewType={GridViewType.MODEL_VIEW} />
+    );
     const gridProduct = mount(jsx);
     expect(gridProduct.find('.Ay-GridProduct__title').text()).toBe(
       'Feinripp-Spaghettitops'
     );
     expect(gridProduct.find('.Ay-GridProduct__brand').text()).toBe('H.I.S');
     expect(gridProduct.find('.Ay-GridProduct__price').text()).toBe('24.99 €');
-    console.log(
-      gridProduct.find('.Ay-GridProduct__image-div').get(0).props.style
-    );
     expect(
       gridProduct.find('.Ay-GridProduct__image-div').get(0).props.style
     ).toHaveProperty(
       'backgroundImage',
-      "url('//cdn.aboutstatic.com/file/858231adcc5b6a09b57b37d863592851?quality=90&progressive=1&bg=f2f2f2&width=600&height=600&trim=1')"
+      "url('//cdn.aboutstatic.com/file/model-image-hash?quality=90&progressive=1&bg=f2f2f2&width=600&height=600&trim=1')"
+    );
+  });
+
+  it('should render model image', () => {
+    const { jsx } = testBed(
+      <GridProduct product={product} viewType={GridViewType.MODEL_VIEW} />
+    );
+    const gridProduct = mount(jsx);
+    expect(
+      gridProduct.find('.Ay-GridProduct__image-div').get(0).props.style
+    ).toHaveProperty(
+      'backgroundImage',
+      "url('//cdn.aboutstatic.com/file/model-image-hash?quality=90&progressive=1&bg=f2f2f2&width=600&height=600&trim=1')"
+    );
+  });
+
+  it('should render product image', () => {
+    const { jsx } = testBed(
+      <GridProduct product={product} viewType={GridViewType.PRODUCT_VIEW} />
+    );
+    const gridProduct = mount(jsx);
+    expect(
+      gridProduct.find('.Ay-GridProduct__image-div').get(0).props.style
+    ).toHaveProperty(
+      'backgroundImage',
+      "url('//cdn.aboutstatic.com/file/product-image-hash?quality=90&progressive=1&bg=f2f2f2&width=600&height=600&trim=1')"
     );
   });
 });

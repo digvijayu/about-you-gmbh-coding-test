@@ -1,8 +1,17 @@
-.Ay-FilterPanel{
+.Ay-FilterPanel {
   padding: 2rem 0;
+  display: flex;
 }
 
-.Ay-FilterPanel__active-view-div {}
+.Ay-FilterPanel__active-view-div {
+  flex: 1;
+  padding-top: 0.4rem;
+}
+
+.Ay-FilterPanel__sort-by-div {
+  flex: 1;
+  text-align: right;
+}
 
 .Ay-FilterPanel__active-view-option {
   cursor: pointer;
@@ -15,4 +24,24 @@
 
 .Ay-FilterPanel__active-view-seperator {
   margin: 0 1rem;
+}
+
+.Ay-FilterPanel__sort-by-select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0.125rem;
+  -webkit-box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 1.25rem;
+  -webkit-padding-start: 0.125rem;
+  -webkit-user-select: none;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  overflow: hidden;
+  padding: 0.3125rem 0.625rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 18.75rem;
 }

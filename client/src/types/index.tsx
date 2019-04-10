@@ -57,7 +57,5 @@ export enum GridViewType {
 
 export enum GridSortType {
   HIGHEST_PRICE,
-  LOWEST_PRICE,
-  NEW_ADDED,
-  HIGHEST_REDUCTION
+  LOWEST_PRICE
 }
